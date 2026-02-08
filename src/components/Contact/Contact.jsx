@@ -12,11 +12,11 @@ const Contact = () => {
     e.preventDefault();
 
     const templateParams = {
-      user_name: form.current.user_name.value,
-      user_email: form.current.user_email.value,
+      from_name: form.current.user_name.value,
+      from_email: form.current.user_email.value,
       subject: form.current.subject.value,
       message: form.current.message.value,
-      to_email: "piyushmishra21052003@gmail.com",
+      to: "piyushmishra21052003@gmail.com",
     };
 
     emailjs
@@ -85,6 +85,12 @@ const Contact = () => {
           placeholder="Message"
           required
           className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
+        />
+
+        <input
+          type="hidden"
+          name="to_email"
+          value="piyushmishra21052003@gmail.com"
         />
 
         <button
