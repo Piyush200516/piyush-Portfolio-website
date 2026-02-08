@@ -144,8 +144,8 @@ export const projects = [
       "A modern personal portfolio built with React.js showcasing projects, skills, and education with smooth UI and animations.",
     image: portfolioLogo,
     tags: ["React JS", "HTML", "CSS", "JavaScript"],
-    github: ".",
-    webapp: ".",
+    github: "https://github.com/Piyush200516/piyush-Portfolio-website",
+    webapp: "https://piyush-portfolio-website-dx18.vercel.app/",
   },
   {
     id: 1,
