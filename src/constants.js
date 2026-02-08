@@ -127,11 +127,11 @@ export const experiences = [
   {
     id: 2,
     img: webverseLogo,
-    role: "Freelance Developer",
-    company: "Webverse",
-    date: "Aug 2023 - Dec 2023",
-    desc: "Built custom websites and applications for clients, focusing on responsive design and performance.",
-    skills: ["HTML", "CSS", "JavaScript", "React"],
+    role: "Freelance Web Developer",
+    company: "Fiverr, Upwork",
+    date: "Jan 2022 – Present",
+    desc: "Developed and delivered full stack web applications for global clients using modern technologies. Worked on frontend, backend, database integration, authentication, and deployment with a strong focus on performance and scalability.",
+    skills: ["HTML", "CSS", "JavaScript", "React","Node.js", "Express", "MongoDB","MySQL","Firebase"],
   },
 ];
 

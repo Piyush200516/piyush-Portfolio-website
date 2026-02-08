@@ -28,33 +28,30 @@ const Education = () => {
               index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
             }`}
           >
-            {/* Timeline Circle */}
-            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
-              <img
-                src={edu.img}
-                alt={edu.school}
-                className="w-full h-full object-cover rounded-full"
-              />
-            </div>
-
             {/* Content Section */}
             <div
               className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
                 index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
-              } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
+              } sm:ml-4 sm:mr-4 ml-8 transform transition-transform duration-300 hover:scale-105`}
             >
               {/* Degree, School Name, and Date */}
-              <div className="flex flex-col">
-                <div>
+              <div className="flex flex-row items-center gap-0.5 mb-2">
+                <div className="bg-gray-400 border-4 border-[#8245ec] w-11 h-11 rounded-full flex justify-center items-center shrink-0">
+                  <img
+                    src={edu.img}
+                    alt={edu.school}
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div className="flex flex-col">
                   <h3 className="text-xl sm:text-xl font-semibold text-white">
                     {edu.degree}
                   </h3>
                   <h4 className="text-md sm:text-sm text-gray-300">
                     {edu.school}
                   </h4>
+                  <p className="text-sm text-gray-500 mt-2">{edu.date}</p>
                 </div>
-                {/* Date at the bottom */}
-                <p className="text-sm text-gray-500 mt-2">{edu.date}</p>
               </div>
 
               <p className="mt-4 text-gray-400 font-bold">Grade: {edu.grade}</p>
