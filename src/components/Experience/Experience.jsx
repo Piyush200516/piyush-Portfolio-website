@@ -39,8 +39,8 @@ const Experience = () => {
               <div className="flex flex-row items-center gap-0.5 mb-2">
                 <div className="w-20 h-20 bg-gray-300 border-4 border-[#8245ec] rounded-full flex justify-center items-center shrink-0 relative z-10">
   <img
-    src="/images/webverse-logo.png" 
-    alt="WEBVERSE DIGITAL"
+    src={experience.img}
+    alt={experience.company}
     className="w-16 h-16 rounded-full object-contain !important"
     width="64"
     height="64"
