@@ -37,7 +37,7 @@ const Experience = () => {
             >
               {/* Role, Company Name, and Date */}
               <div className="flex flex-row items-center gap-0.5 mb-2">
-                <div className="bg-gray-300 border-5 border-[#8245ec] w-9 h-8 rounded-full flex justify-center items-center shrink-0 relative z-10 w-full max-w-xl">
+                <div className="bg-gray-300 border-5 border-[#8245ec] w-6 h-5 rounded-full flex justify-center items-center shrink-0 relative z-10 w-full max-w-xl">
                   <img
                     src={experience.img}
                     alt={experience.company}
