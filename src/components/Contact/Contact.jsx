@@ -3,8 +3,6 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-emailjs.init("Rz7W9pVF0HdDryNNL");
-
 const Contact = () => {
   const form = useRef();
 
@@ -13,10 +11,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_axbtt7a",
-        "template_1ziboq3",
+        "service_axbtt7a",        // Service ID
+        "template_1ziboq3",       // Template ID
         form.current,
-        "Rz7W9pVF0HdDryNNL"
+        "Rz7W9pVF0HdDryNNL"       // Public Key
       )
       .then(
         () => {
@@ -26,7 +24,7 @@ const Contact = () => {
           form.current.reset();
         },
         (error) => {
-          console.error("EmailJS Error:", error);
+          console.error("EmailJS Error:", error.text);
           toast.error("Failed to send message ❌", {
             theme: "dark",
           });
