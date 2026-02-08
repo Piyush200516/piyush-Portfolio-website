@@ -1,42 +1,28 @@
-import { useRef } from "react";
-import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 
 const Contact = () => {
-  const form = useRef();
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_uolgjkf",
-        "template_1ziboq3",
-        form.current,
-        "Rz7W9pVF0HdDryNNL"
-      )
-      .then(
-        () => {
-          toast.success("Message sent successfully ✅", { theme: "dark" });
-          form.current.reset();
-        },
-        (error) => {
-          console.error("EmailJS FULL ERROR:", error);
-          toast.error(error.text || "Failed to send message ❌", {
-            theme: "dark",
-          });
-        }
-      );
+    const text = `Hello, my name is ${name}.
+Phone: ${phone}
+Message: ${message}`;
+
+    const whatsappUrl = `https://wa.me/919981111939?text=${encodeURIComponent(
+      text
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
     <section id="contact" className="py-24 flex justify-center">
-      <ToastContainer />
-
       <form
-        ref={form}
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit}
         className="bg-[#0d081f] p-6 rounded-xl w-full max-w-md space-y-4 border border-gray-700"
       >
         <h3 className="text-white text-xl text-center font-semibold">
@@ -45,33 +31,28 @@ const Contact = () => {
 
         <input
           type="text"
-          name="user_name"
           placeholder="Your Name"
           required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
         />
 
         <input
-          type="email"
-          name="user_email"
-          placeholder="Your Email"
+          type="tel"
+          placeholder="Your Phone Number"
           required
-          className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
-        />
-
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          required
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
           className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
         />
 
         <textarea
-          name="message"
           rows="4"
-          placeholder="Message"
+          placeholder="Your Message"
           required
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
         />
 
@@ -79,7 +60,7 @@ const Contact = () => {
           type="submit"
           className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-md text-white font-semibold"
         >
-          Send
+          Send Message
         </button>
       </form>
     </section>
