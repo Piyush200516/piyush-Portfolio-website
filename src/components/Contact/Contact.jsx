@@ -11,11 +11,19 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const templateParams = {
+      user_name: form.current.user_name.value,
+      user_email: form.current.user_email.value,
+      subject: form.current.subject.value,
+      message: form.current.message.value,
+      to_email: "piyushmishra21052003@gmail.com",
+    };
+
     emailjs
-      .sendForm(
+      .send(
         "service_axbtt7a",
         "template_1ziboq3",
-        form.current,
+        templateParams,
         "Rz7W9pVF0HdDryNNL"
       )
       .then(
