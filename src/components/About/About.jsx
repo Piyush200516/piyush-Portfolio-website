@@ -1,6 +1,7 @@
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
 import profileImage from '../../assets/profile2.png';
+import resumePDF from '../../assets/Resume Piyush.pdf';
 
 const About = () => {
   return (
@@ -43,7 +44,7 @@ const About = () => {
           </p>
           {/* Resume Button */}
           <a
-            href="/assets/Resume Piyush.pdf"
+            href={resumePDF}
             download="Resume Piyush.pdf"
             target="_blank"
             rel="noopener noreferrer"
