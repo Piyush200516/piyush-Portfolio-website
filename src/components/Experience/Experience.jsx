@@ -37,13 +37,16 @@ const Experience = () => {
             >
               {/* Role, Company Name, and Date */}
               <div className="flex flex-row items-center gap-0.5 mb-2">
-                <div className="bg-gray-300 border-5 border-[#8245ec] w-24 h-24 rounded-full flex justify-center items-center shrink-0 relative z-10">
-                      <img
-                          src={experience.img}
-                           alt={experience.company}
-                           className="w-20 h-20 object-contain rounded-full"  // Fixed!
-                      />
-                </div>
+                <div className="w-20 h-20 bg-gray-300 border-4 border-[#8245ec] rounded-full flex justify-center items-center shrink-0 relative z-10">
+  <img
+    src="/images/webverse-logo.png" 
+    alt="WEBVERSE DIGITAL"
+    className="w-16 h-16 rounded-full object-contain !important"
+    width="64"
+    height="64"
+    loading="eager"
+  />
+</div>
                 <div className="flex flex-col">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white">
                     {experience.role}
