@@ -11,21 +11,19 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_uolgjkf",        // Service ID
-        "template_1ziboq3",       // Template ID
+        "service_uolgjkf",
+        "template_1ziboq3",
         form.current,
-        "Rz7W9pVF0HdDryNNL"       // Public Key
+        "Rz7W9pVF0HdDryNNL"
       )
       .then(
         () => {
-          toast.success("Message sent successfully ✅", {
-            theme: "dark",
-          });
+          toast.success("Message sent successfully ✅", { theme: "dark" });
           form.current.reset();
         },
         (error) => {
-          console.error("EmailJS Error:", error.text);
-          toast.error("Failed to send message ❌", {
+          console.error("EmailJS FULL ERROR:", error);
+          toast.error(error.text || "Failed to send message ❌", {
             theme: "dark",
           });
         }
