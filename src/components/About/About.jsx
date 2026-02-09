@@ -56,9 +56,7 @@ const About = () => {
           </h2>
 
           <p className="text-base sm:text-lg md:text-lg text-gray-300 mb-10 mt-8 leading-relaxed">
-            I am an aspiring full-stack developer with a  strong foundation in front-end and back-end development.
-            I specialize in the MERN stack and enjoy building modern,
-            responsive, and performance-driven web applications.
+            I am Piyush Mishra, a passionate Frontend Developer specializing in React and JavaScript. I build responsive and user-friendly web applications.
           </p>
 
           <a
