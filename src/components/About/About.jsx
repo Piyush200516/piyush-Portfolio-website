@@ -43,7 +43,7 @@ const About = () => {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Piyush Mishra
+            Piyush – Frontend Developer
           </h1>
 
           {/* 🔥 Typing Effect Text */}
