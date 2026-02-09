@@ -1,13 +1,16 @@
+import { lazy, Suspense } from 'react';
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Experience from "./components/Experience/Experience";
-import Work from "./components/Work/Work";
-import Education from "./components/Education/Education";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
 import BlurBlob from './components/BlurBlob';
 import Seo from './components/Seo';
+
+// Lazy load heavy components to reduce initial JS bundle size
+const Skills = lazy(() => import('./components/Skills/Skills'));
+const Experience = lazy(() => import('./components/Experience/Experience'));
+const Work = lazy(() => import('./components/Work/Work'));
+const Education = lazy(() => import('./components/Education/Education'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
+const Footer = lazy(() => import('./components/Footer/Footer'));
 
 const App = () => {
   return (
@@ -39,12 +42,24 @@ const App = () => {
         <div className="relative pt-20">
           <Navbar />
           <About />
-          <Skills />
-          <Experience />
-          <Work />
-          <Education />
-          <Contact />
-          <Footer />
+          <Suspense fallback={<div className="text-white text-center py-10">Loading...</div>}>
+            <Skills />
+          </Suspense>
+          <Suspense fallback={<div className="text-white text-center py-10">Loading...</div>}>
+            <Experience />
+          </Suspense>
+          <Suspense fallback={<div className="text-white text-center py-10">Loading...</div>}>
+            <Work />
+          </Suspense>
+          <Suspense fallback={<div className="text-white text-center py-10">Loading...</div>}>
+            <Education />
+          </Suspense>
+          <Suspense fallback={<div className="text-white text-center py-10">Loading...</div>}>
+            <Contact />
+          </Suspense>
+          <Suspense fallback={<div className="text-white text-center py-10">Loading...</div>}>
+            <Footer />
+          </Suspense>
         </div>
 
       </div>

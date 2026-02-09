@@ -19,6 +19,9 @@ const Seo = ({ title, description, canonical, image, schemaMarkup }) => (
     <meta name="twitter:image" content={image} />
     <meta name="twitter:card" content="summary_large_image" />
 
+    {/* Preload critical resources for LCP */}
+    <link rel="preload" href={image} as="image" />
+
     {/* Structured Data (Schema Markup) */}
     {schemaMarkup && (
       <script type="application/ld+json">
