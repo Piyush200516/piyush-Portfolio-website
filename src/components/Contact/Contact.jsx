@@ -13,12 +13,12 @@ const Contact = () => {
     e.preventDefault();
 
     const templateParams = {
-      name: name,
-      email: email,
-      phone: phone,
-      profession: profession,
-      budget: budget,
-      message: message,
+      name,
+      email,
+      phone,
+      profession,
+      budget,
+      message,
     };
 
     emailjs
