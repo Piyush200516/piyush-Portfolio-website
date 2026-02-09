@@ -1,129 +1,188 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [profession, setProfession] = useState("");
-  const [budget, setBudget] = useState("");
-  const [message, setMessage] = useState("");
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    budget: "",
+    project: "",
+    message: "",
+  });
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const sendMessage = (e) => {
     e.preventDefault();
 
-    const templateParams = {
-      name,
-      email,
-      phone,
-      profession,
-      budget,
-      message,
-    };
+    if (!form.name || !form.message) {
+      toast.error("Please fill required fields");
+      return;
+    }
 
-    emailjs
-      .send(
-        "service_uolgjkf",        // SERVICE ID
-        "template_6rwf74a",       // TEMPLATE ID
-        templateParams,
-        "0mWuughGAit8RKeLy"       // PUBLIC KEY
-      )
-      .then(
-        () => {
-          alert("✅ Message sent successfully! I will contact you soon.");
-          setName("");
-          setEmail("");
-          setPhone("");
-          setProfession("");
-          setBudget("");
-          setMessage("");
-        },
-        (error) => {
-          console.error(error);
-          alert("❌ Failed to send message. Please try again.");
-        }
-      );
+    const whatsappURL = `https://wa.me/919981111939?text=${encodeURIComponent(
+      `Portfolio Inquiry 🚀
+
+Name: ${form.name}
+Email: ${form.email}
+Phone: ${form.phone}
+Budget: ${form.budget}
+Project Type: ${form.project}
+
+Message:
+${form.message}`
+    )}`;
+
+    toast.success("Opening WhatsApp…");
+
+    setTimeout(() => {
+      window.open(whatsappURL, "_blank");
+    }, 1000);
   };
 
   return (
-    <section id="contact" className="py-24 flex justify-center">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-[#0d081f] p-6 rounded-xl w-full max-w-md space-y-4 border border-gray-700"
-      >
-        <h3 className="text-white text-xl text-center font-semibold">
-          Portfolio Project Inquiry 🚀
-        </h3>
+    <>
+      <style>{`
+        .contact-wrapper {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 40px 20px;
+          background: radial-gradient(circle at top, #1a0033, #05000f);
+        }
 
-        <input
-          type="text"
-          placeholder="Your Name"
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
-        />
+        .contact-card {
+          width: 100%;
+          max-width: 460px;
+          padding: 32px;
+          border-radius: 18px;
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(18px);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        }
 
-        <input
-          type="email"
-          placeholder="Your Email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
-        />
+        .contact-title {
+          text-align: center;
+          color: #fff;
+          font-size: 22px;
+          font-weight: 600;
+          margin-bottom: 24px;
+        }
 
-        <input
-          type="tel"
-          placeholder="Your Phone Number"
-          required
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
-        />
+        .contact-card input,
+        .contact-card textarea,
+        .contact-card select {
+          width: 100%;
+          padding: 14px 16px;
+          margin-bottom: 16px;
+          border-radius: 10px;
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(229, 99, 99, 0.2);
+          color: #b86060;
+          font-size: 14px;
+          outline: none;
+        }
 
-        <input
-          type="text"
-          placeholder="Your Profession (e.g. Web Developer)"
-          required
-          value={profession}
-          onChange={(e) => setProfession(e.target.value)}
-          className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
-        />
+        .contact-card textarea {
+          min-height: 110px;
+          resize: none;
+        }
 
-        <select
-          required
-          value={budget}
-          onChange={(e) => setBudget(e.target.value)}
-          className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
-        >
-          <option value="">Select Budget Range</option>
-          <option value="$50 - $100">$50 - $100</option>
-          <option value="$100 - $200">$100 - $200</option>
-          <option value="$200+">$200+</option>
-        </select>
+        .contact-card input::placeholder,
+        .contact-card textarea::placeholder {
+          color: #bbb;
+        }
 
-        <textarea
-          rows="4"
-          placeholder="Tell me about your portfolio (skills, projects, style)"
-          required
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="w-full p-3 bg-[#131025] text-white rounded-md border border-gray-600"
-        />
+        .contact-card select {
+          cursor: pointer;
+        }
 
-        <button
-          type="submit"
-          className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-md text-white font-semibold"
-        >
-          Send Request
-        </button>
+        .contact-btn {
+          width: 100%;
+          padding: 14px;
+          border-radius: 12px;
+          border: none;
+          font-size: 15px;
+          font-weight: 600;
+          color: #fff;
+          cursor: pointer;
+          background: linear-gradient(135deg, #8a2be2, #ff4da6);
+        }
 
-        <p className="text-gray-400 text-xs text-center">
-          Fiverr & Upwork friendly • Email will be sent directly to me
-        </p>
-      </form>
-    </section>
+        .contact-footer {
+          margin-top: 14px;
+          font-size: 12px;
+          text-align: center;
+          color: #aaa;
+        }
+      `}</style>
+
+      <div className="contact-wrapper">
+        <form className="contact-card" onSubmit={sendMessage}>
+          <div className="contact-title">
+            Portfolio Project Inquiry 🚀
+          </div>
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            onChange={handleChange}
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            onChange={handleChange}
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your Phone"
+            onChange={handleChange}
+          />
+
+          <select name="budget" onChange={handleChange}>
+            <option value="">Select Budget</option>
+            <option>$50 – $100</option>
+            <option>$100 – $300</option>
+            <option>$300 – $500</option>
+            <option>$500+</option>
+          </select>
+
+          <input
+            type="text"
+            name="project"
+            placeholder="Project Type (Website, App, UI etc.)"
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="message"
+            placeholder="Tell me about your project…"
+            onChange={handleChange}
+          ></textarea>
+
+          <button className="contact-btn" type="submit">
+            Send Request
+          </button>
+
+          <div className="contact-footer">
+            Fiverr & Upwork friendly • Message goes directly to WhatsApp
+          </div>
+        </form>
+
+        <ToastContainer />
+      </div>
+    </>
   );
 };
 
