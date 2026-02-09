@@ -13,15 +13,15 @@ const About = () => {
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
+          <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
-          </h1>
+          </p>
           {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
             Piyush Mishra
-          </h2>
+          </h1>
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
             <span className="text-white">I am a </span>
             <ReactTypingEffect
               text={[
@@ -36,10 +36,10 @@ const About = () => {
                 <span className="text-[#8245ec]">{cursor}</span>
               )}
             />
-          </h3>
+          </h2>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-           I am an aspiring full-stack developer with a <br/> strong foundation in front-end and back-end development. 
+          <p className="text-base sm:text-lg md:text-lg text-gray-300 mb-10 mt-8 leading-relaxed">
+           I am an aspiring full-stack developer with a <br/> strong foundation in front-end and back-end development.
            I specialize in the MERN stack and enjoy building modern, responsive, and performance-driven web applications.
           </p>
           {/* Resume Button */}
@@ -72,6 +72,8 @@ const About = () => {
             <img
               src={profileImage}
               alt="Piyush Mishra"
+              width="480"
+              height="480"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
           </Tilt>

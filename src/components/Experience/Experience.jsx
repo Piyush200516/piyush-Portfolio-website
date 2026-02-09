@@ -10,7 +10,7 @@ const Experience = () => {
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">EXPERIENCE</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+        <p className="text-gray-300 mt-4 text-lg font-semibold">
           A collection of my work experience and the roles I have taken in
           various organizations
         </p>
@@ -41,9 +41,9 @@ const Experience = () => {
   <img
     src={experience.img}
     alt={experience.company}
-    className="w-16 h-16 rounded-full object-contain !important"
     width="64"
     height="64"
+    className="w-16 h-16 rounded-full object-contain !important"
     loading="eager"
   />
 </div>
@@ -58,7 +58,7 @@ const Experience = () => {
                 </div>
               </div>
 
-              <p className="mt-4 text-gray-400">{experience.desc}</p>
+              <p className="mt-4 text-gray-300">{experience.desc}</p>
               <div className="mt-4">
                 <h5 className="font-medium text-white">Skills:</h5>
                 <ul className="flex flex-wrap mt-2">

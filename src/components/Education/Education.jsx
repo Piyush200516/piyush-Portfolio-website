@@ -10,7 +10,7 @@ const Education = () => {
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+        <p className="text-gray-300 mt-4 text-lg font-semibold">
           My education has been a journey of learning and development. Here are the details of my academic background
         </p>
       </div>
@@ -40,6 +40,8 @@ const Education = () => {
                   <img
                     src={edu.img}
                     alt={edu.school}
+                    width="44"
+                    height="44"
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
@@ -54,8 +56,8 @@ const Education = () => {
                 </div>
               </div>
 
-              <p className="mt-4 text-gray-400 font-bold">Grade: {edu.grade}</p>
-              <p className="mt-4 text-gray-400">{edu.desc}</p>
+              <p className="mt-4 text-gray-300 font-bold">Grade: {edu.grade}</p>
+              <p className="mt-4 text-gray-300">{edu.desc}</p>
             </div>
           </div>
         ))}
