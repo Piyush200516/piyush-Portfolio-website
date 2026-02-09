@@ -47,19 +47,32 @@ ${form.message}`
   return (
     <>
       <style>{`
+        /* ===== FINAL RESPONSIVE FIX ===== */
+
         .contact-wrapper {
-          min-height: 100vh;
+          width: 100%;
+          padding: 64px 20px;
+          background: radial-gradient(circle at top, #1a0033, #05000f);
           display: flex;
           justify-content: center;
-          align-items: center;
-          padding: 40px 20px;
-          background: radial-gradient(circle at top, #1a0033, #05000f);
+        }
+
+        @media (max-width: 1024px) {
+          .contact-wrapper {
+            padding: 48px 16px;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .contact-wrapper {
+            padding: 40px 14px;
+          }
         }
 
         .contact-card {
           width: 100%;
-          max-width: 460px;
-          padding: 32px;
+          max-width: 420px;
+          padding: 28px;
           border-radius: 18px;
           background: rgba(255, 255, 255, 0.05);
           backdrop-filter: blur(18px);
@@ -84,7 +97,7 @@ ${form.message}`
           border-radius: 10px;
           background: rgba(255,255,255,0.08);
           border: 1px solid rgba(229, 99, 99, 0.2);
-          color: #b86060;
+          color: #fff;
           font-size: 14px;
           outline: none;
         }
@@ -97,10 +110,6 @@ ${form.message}`
         .contact-card input::placeholder,
         .contact-card textarea::placeholder {
           color: #bbb;
-        }
-
-        .contact-card select {
-          cursor: pointer;
         }
 
         .contact-btn {
@@ -129,26 +138,9 @@ ${form.message}`
             Portfolio Project Inquiry 🚀
           </div>
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            onChange={handleChange}
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            onChange={handleChange}
-          />
-
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Your Phone"
-            onChange={handleChange}
-          />
+          <input type="text" name="name" placeholder="Your Name" onChange={handleChange} />
+          <input type="email" name="email" placeholder="Your Email" onChange={handleChange} />
+          <input type="tel" name="phone" placeholder="Your Phone" onChange={handleChange} />
 
           <select name="budget" onChange={handleChange}>
             <option value="">Select Budget</option>
