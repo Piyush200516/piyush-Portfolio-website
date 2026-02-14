@@ -55,9 +55,11 @@ const About = () => {
             </span>
           </h2>
 
-          <p className="text-base sm:text-lg md:text-lg text-gray-300 mb-10 mt-8 leading-relaxed">
-            I am Piyush Mishra, a passionate Frontend Developer specializing in React and JavaScript. I build responsive and user-friendly web applications.
-          </p>
+          <p className="mt-8 mb-10 text-base sm:text-lg md:text-lg text-gray-300 leading-relaxed text-center md:text-left max-w-2xl mx-auto md:mx-0">
+  I am Piyush Mishra, a passionate Frontend Developer specializing in React and JavaScript. 
+  I build responsive and user-friendly web applications.
+</p>
+
 
           <a
             href={resumePDF}
