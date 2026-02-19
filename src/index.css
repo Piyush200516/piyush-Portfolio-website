@@ -1,3 +1,21 @@
+/* 👇 YAHI ADD KARO (Tailwind ke baad) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌙 Global Dark Mode Setup */
+@layer base {
+  body {
+    @apply bg-white text-black transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-[#050414] text-white;
+  }
+}
+
+/* Tumhara existing font & utility code neeche rahega */
+
 /* Local Poppins font for performance and CLS fix */
 @font-face {
   font-family: 'Poppins';
