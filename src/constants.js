@@ -149,12 +149,12 @@ export const projects = [
   },
   {
     id: 1,
-    title: "CS Prep",
+    title: "CampusFlow",
     description:
-      "A quiz-based platform for students to practice and track performance with analytics.",
+      "CampusFlow is a cloud-based, AI-powered college management system that manages students, faculty, and administration on a single platform.",
     image: csprepLogo,
-    tags: ["React JS", "Node.js", "MongoDB", "Express"],
-    github: ".",
+    tags: ["React JS", "Node.js", "Express", "MySQL", "JWT", "AWS/Firebase", "OpenAI API"],
+    github: "https://github.com/Piyush200516/CampusFlow",
     webapp: ".",
   },
   {
