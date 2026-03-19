@@ -1,5 +1,7 @@
-# SEO Optimization Tasks
+# Task: Add project.png as id:1 project
 
-- [x] Update index.html: Improve title with keywords "Piyush Mishra | Frontend Developer | React Developer Portfolio" and meta description
-- [x] Update src/components/About/About.jsx: Change <h1> to "Piyush Mishra – Frontend Developer & React Developer" and add keywords to body text
-- [x] Verify changes in files
+## Steps:
+1. [x] Edit `src/constants.js`: Insert new project object with id:1, image:'/project.png' at index 1, shift existing ids (old id1->2, etc.).
+2. [x] Verify image loads at /#work.
+3. [x] Mark complete.
+

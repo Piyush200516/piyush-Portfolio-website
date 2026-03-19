@@ -149,16 +149,25 @@ export const projects = [
   },
   {
     id: 1,
+    title: "Featured Project",
+    description: "New project featuring the project.png image.",
+    image: csprepLogo,
+    tags: ["React", "JavaScript", "Tailwind CSS"],
+    github: ".",
+    webapp: ".",
+  },
+  {
+    id: 2,
     title: "CampusFlow",
     description:
       "CampusFlow is a cloud-based, AI-powered college management system that manages students, faculty, and administration on a single platform.",
-    image: csprepLogo,
+    image: "/project.png",
     tags: ["React JS", "Node.js", "Express", "MySQL", "JWT", "AWS/Firebase", "OpenAI API"],
     github: "https://github.com/Piyush200516/CampusFlow",
     webapp: ".",
   },
   {
-    id: 2,
+    id: 3,
     title: "Movie Recommendation App",
     description:
       "A React app that recommends movies using API-based filtering.",
@@ -168,7 +177,7 @@ export const projects = [
     webapp: ".",
   },
   {
-    id: 3,
+    id: 4,
     title: "Image Background Remover",
     description:
       "Remove image backgrounds instantly using API integration.",
