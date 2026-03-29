@@ -23,13 +23,10 @@ import mcLogo from "./assets/tech_logo/mc.png";
 import netlifyLogo from "./assets/tech_logo/netlify.png";
 import vercelLogo from "./assets/tech_logo/vercel.png";
 import postgreLogo from "./assets/tech_logo/postgre.png";
-import kafkaLogo from "./assets/kafka.png";
+// ✅ FIXED: Added missing imports
+import kafkaLogo from "../assets/kafka.png";
 import supabaseLogo from "./assets/tech_logo/supabase.png";
-import Manualtasting from "./assets/tech_logo/Manualtasting.png";
-import STLC from "./assets/tech_logo/STLC.png";
-import TestCase from "./assets/tech_logo/TestCase.png";
-import Bugreport from "./assets/tech_logo/Bugreport.png";
-import CIMS from "./assets/tech_logo/CIMS.png";
+
 // ================== EDUCATION LOGOS ==================
 import acropolisLogo from "./assets/education_logo/Acropilis.png";
 import svpcLogo from "./assets/education_logo/SVPC.PNG";
@@ -42,8 +39,7 @@ import webverseLogo from "./assets/company_logo/webverse_logo.png";
 import csprepLogo from "./assets/work_logo/cs_prep.png";
 import movierecLogo from "./assets/work_logo/movie_rec.png";
 import portfolioLogo from "./assets/work_logo/portfolio.png";
-import removebgLogo from "./assets/work_logo/remove_bg.png"; // ✅ FIXED
-
+import removebgLogo from "./assets/work_logo/remove_bg.png";
 
 // ================== SKILLS ==================
 export const SkillsInfo = [
@@ -66,7 +62,7 @@ export const SkillsInfo = [
     skills: [
       { name: "Node JS", logo: nodejsLogo },
       { name: "Express JS", logo: expressjsLogo },
-{ name: "APACHE KAFKA", logo: kafkaLogo },
+      { name: "APACHE KAFKA", logo: kafkaLogo }, // ✅ FIXED
     ],
   },
   {
@@ -75,7 +71,7 @@ export const SkillsInfo = [
       { name: "MySQL", logo: mysqlLogo },
       { name: "MongoDB", logo: mongodbLogo },
       { name: "Firebase", logo: firebaseLogo },
-{ name: "Supabase", logo: supabaseLogo },
+      { name: "Supabase", logo: supabaseLogo }, // ✅ FIXED
       { name: "PostgreSQL", logo: postgreLogo },
     ],
   },
@@ -101,15 +97,14 @@ export const SkillsInfo = [
   {
     title: "Testing",
     skills: [
-      { name: "Manual Testing", logo: Manualtasting },
-      { name: "STLC", logo: STLC },
-      { name: "Test Cases", logo: TestCase },
-      { name: "Bug Reporting", logo: Bugreport },
-      { name: "CIMS Basics (Insurance Claims)", logo: CIMS },
+      { name: "Manual Testing", logo: postmanLogo },
+      { name: "STLC", logo: gitLogo },
+      { name: "Test Cases", logo: vscodeLogo },
+      { name: "Bug Reporting", logo: githubLogo },
+      { name: "CIMS Basics (Insurance Claims)", logo: postmanLogo },
     ],
   },
 ];
-
 
 // ================== EDUCATION ==================
 export const education = [

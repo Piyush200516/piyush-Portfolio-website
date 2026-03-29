@@ -1,7 +1,4 @@
-/* 👇 YAHI ADD KARO (Tailwind ke baad) */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Fixed: Removed duplicate @tailwind directives */
 
 /* 🌙 Global Dark Mode Setup */
 @layer base {
@@ -16,70 +13,7 @@
 
 /* Tumhara existing font & utility code neeche rahega */
 
-/* Local Poppins font for performance and CLS fix */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url('/assets/fonts/poppins-v20-latin-100.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url('/assets/fonts/poppins-v20-latin-200.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('/assets/fonts/poppins-v20-latin-300.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/assets/fonts/poppins-v20-latin-regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/assets/fonts/poppins-v20-latin-500.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/assets/fonts/poppins-v20-latin-600.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/assets/fonts/poppins-v20-latin-700.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url('/assets/fonts/poppins-v20-latin-800.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url('/assets/fonts/poppins-v20-latin-900.woff2') format('woff2');
-}
+/* Fonts loaded via Google Fonts in index.html - local fonts removed (no assets/fonts dir) */
 /* Italic variants if needed - add similarly */
 
 @tailwind base;
