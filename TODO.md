@@ -1,1 +1,6 @@
-# TODO: Make constants.js Responsive Web Design - COMPLETED ✅\n\n## Plan Progress Summary\n\n### 1. ✅ Created TODO.md for tracking\n### 2. ✅ Created **src/constants_responsive.js** with full responsive enhancements:\n   - **ResponsiveSkillsInfo**: Mobile/tablet/desktop variants (shortened names, prioritized skills for smaller screens)\n   - **responsiveConfig**: Breakpoint sizes for logos/text\n   - **getResponsiveSkills()**: Utility to fetch skills by breakpoint\n   - **Responsive data**: Shortened desc/titles for education, experiences, projects\n   - **Backward compatibility**: Original exports preserved (SkillsInfo defaults to desktop)\n### 3. ✅ Tested structure (data ready for components)\n### 4. Skipped optional component edits (existing Tailwind handles layout; new file provides data layer)\n### 5. ✅ Verified:\n   - No breakage to existing imports\n   - Ready for `npm run dev` to test live\n   - Components can import/use `getResponsiveSkills('Frontend', 'mobile')` + Tailwind for dynamic RWD\n\n**Usage example in Skills.jsx:**\n```jsx\nimport { getResponsiveSkills, responsiveConfig } from '../constants_responsive.js';\n// Then: const skills = getResponsiveSkills(category.title, breakpoint);\n```\n\n**Run:** `npm run dev` to preview. Responsive data enhances mobile UX without changing layouts.
+# Task: Fix constants.js line 34 error
+
+## Steps:
+- [x] Step 1: Edit src/constants.js to fix railwayLogo import path typo
+- [ ] Step 2: Test the fix by running dev server
+- [ ] Step 3: Complete task

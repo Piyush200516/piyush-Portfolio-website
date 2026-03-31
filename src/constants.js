@@ -31,6 +31,7 @@ import TestCase from "./assets/tech_logo/TestCase.png";
 import Bugreport from "./assets/tech_logo/Bugreport.png";
 import CIMS from "./assets/tech_logo/CIMS.png";
 import JIRSTOOL from "./assets/tech_logo/jira.jpg";
+import railwayLogo from "./assets/tech_logo/railway.png";
 // ================== EDUCATION LOGOS ==================
 import acropolisLogo from "./assets/education_logo/Acropilis.png";
 import svpcLogo from "./assets/education_logo/SVPC.PNG";
@@ -96,6 +97,7 @@ export const SkillsInfo = [
       { name: "Postman", logo: postmanLogo },
       { name: "MongoDB Compass", logo: mcLogo },
       { name: "Vercel", logo: vercelLogo },
+      { name: " Railway", logo: railwayLogo },
       { name: "Netlify", logo: netlifyLogo },
       { name: "JIRA", logo: JIRSTOOL },
     ],
