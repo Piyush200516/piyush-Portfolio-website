@@ -122,7 +122,7 @@ export const education = [
     img: acropolisLogo,
     school: "Acropolis Institute of Technology and Research, Indore",
     date: "Aug 2024 - May 2027",
-    grade: "6.00 CGPA",
+    grade: "6.19 CGPA",
     degree:
       "Bachelor of Technology - B.Tech (Computer Science and Engineering - Regional Language)",
     desc:
